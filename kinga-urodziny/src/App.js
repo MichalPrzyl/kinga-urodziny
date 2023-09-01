@@ -28,6 +28,8 @@ const getTodaysDate = () => {
 const App = () => {
   const [todaysDate, setTodaysDate] = useState(null);
   const [reason, setReason] = useState(null);
+  const [rotateChevron, setRotateChevron] = useState(false);
+
 
   useEffect(() => {
     const todayDate = getTodaysDate();
@@ -37,13 +39,14 @@ const App = () => {
     
     
   }, [])
-  
+  const handleRotate = () => setRotateChevron(!rotateChevron);
+  const rotate = rotateChevron ? "rotate(360deg)" : "rotate(0)"
   return <>
     <div className='container'>
       <div className='date'>{todaysDate}</div>
       <div className='psst'>Pssssstt... Kiki</div>
       <div className='today'>Dzisiaj Cię kocham, bo...</div>
-      <div className='heart-icon'><img src={logo}  /></div>
+      <div className='heart-icon' style={{transform: rotate, transition: "all 0.2s linear"}} onClick={handleRotate}><img src={logo}  /></div>
       <div className='reason'>{reason}</div>
     </div>
   </>
