@@ -1,13 +1,25 @@
 
 import React, {useState, useEffect} from 'react';
-import reasons, { getRandomInt } from './Reasons';
+import reasons, { getRandomInt, getTodaysReason } from './Reasons';
 import './style.css'
+import logo from  './big-red-heart-drawing.png';
+
 
 const getTodaysDate = () => {
   const date = new Date();
   let day = date.getDate();
   let month = date.getMonth() + 1;
   let year = date.getFullYear();
+
+  // adding '0' in the beginning if number of digits == 1
+  if (day.toString().length == 1){
+    day = `0${day}`
+  }
+  if (month.toString().length == 1){
+    month = `0${month}`
+  }
+
+  // returning value
   let currentDate = `${day}-${month}-${year}`;
   return currentDate
 }
@@ -18,11 +30,10 @@ const App = () => {
   const [reason, setReason] = useState(null);
 
   useEffect(() => {
-    setTodaysDate(getTodaysDate());
-    const x = getRandomInt(0,11);
-
-    console.log(reasons[x]);
-    setReason(reasons[x]);
+    const todayDate = getTodaysDate();
+    setTodaysDate(todayDate); // state
+    const goodReason = getTodaysReason(todayDate); // getting reason for today's date
+    setReason(goodReason);
     
     
   }, [])
@@ -32,7 +43,7 @@ const App = () => {
       <div className='date'>{todaysDate}</div>
       <div className='psst'>Pssssstt... Kiki</div>
       <div className='today'>Dzisiaj Cię kocham bo...</div>
-      <div className='heart-icon'></div>
+      <div className='heart-icon'><img src={logo}  /></div>
       <div className='reason'>{reason}</div>
     </div>
   </>
