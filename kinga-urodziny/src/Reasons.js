@@ -1,3 +1,7 @@
+// TODO:
+// Add reason for every day in year. Good luck
+// P.S. Make sure there is no "wyjątkowy(a) words..."
+
 const reasons = {
     '02-09-2023': '...twój uśmiech rozjaśnia moje najszarejsze dni.',
     '03-09-2023': "...twoje wsparcie dodaje mi sił do pokonywania trudności.",
