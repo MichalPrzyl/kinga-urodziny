@@ -2,7 +2,7 @@
 import React, {useState, useEffect} from 'react';
 import reasons, { getRandomInt, getTodaysReason } from './Reasons';
 import './style.css'
-import logo from  './big-red-heart-drawing.png';
+import logo from  './kandm.png';
 
 
 const getTodaysDate = () => {
@@ -46,7 +46,7 @@ const App = () => {
       <div className='date'>{todaysDate}</div>
       <div className='psst'>Pssssstt... Kiki</div>
       <div className='today'>Dzisiaj Cię kocham, bo...</div>
-      <div className='heart-icon' style={{transform: rotate, transition: "all 0.2s linear"}} onClick={handleRotate}><img src={logo}  /></div>
+      <div className='heart-icon rotating'><img src={logo}  /></div>
       <div className='reason'>{reason}</div>
     </div>
   </>

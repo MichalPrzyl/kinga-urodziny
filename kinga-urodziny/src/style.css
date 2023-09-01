@@ -6,6 +6,7 @@
 }
 
 .date{
+    margin-top: 1%;
     color: rgb(124, 124, 124);
 }
 
@@ -23,11 +24,12 @@
 }
 
 .heart-icon{
-    width: 30%;
-    height: 300px;
+    width: 300px;
     display: flex;
     justify-content: center;
-    transition: translate 2s;
+    /* transition: all 3s linear; */
+    /* transform: rotate(160deg); */
+    /* transition: rotate 4s; */
 }
 
 .heart-icon:hover{
@@ -36,10 +38,42 @@
 
 .heart-icon img{
     max-width: 100%;
-    max-height: 100%;
+    /* width: 50%; */
+    /* height: 50%; */
+    /* max-height: 100%; */
+    /* min-width: none; */
 }
 
 .reason{
     font-size: 2em;
-    margin-top: 4%;
+    /* margin-top: 4%; */
+}
+
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.rotating {
+    animation: rotating 8s linear infinite;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .date{
+        margin-top: 10%;
+    }
+    .today, .psst, .reason {
+        font-size: 1em;
+        /* margin-bottom: 10%; */
+  }
+  .heart-icon{
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+  }
 }
