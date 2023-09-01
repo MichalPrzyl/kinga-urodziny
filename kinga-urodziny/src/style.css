@@ -6,20 +6,23 @@
 }
 
 .date{
-
+    color: rgb(124, 124, 124);
 }
 
 .psst{
-
+    margin-top: 5%;
+    font-size: 1.5em;
 }
 
 .today{
+    margin-top: 1%;
+    margin-bottom: 3%;
+    color: red;
+    font-size: 3em;
 
 }
 
 .heart-icon{
-    /* border: 1px solid black; */
-    /* width: 200px; */
     width: 30%;
     height: 300px;
     display: flex;
@@ -32,5 +35,5 @@
 }
 
 .reason{
-
+    font-size: 2em;
 }

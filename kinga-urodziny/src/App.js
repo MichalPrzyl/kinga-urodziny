@@ -42,7 +42,7 @@ const App = () => {
     <div className='container'>
       <div className='date'>{todaysDate}</div>
       <div className='psst'>Pssssstt... Kiki</div>
-      <div className='today'>Dzisiaj Cię kocham bo...</div>
+      <div className='today'>Dzisiaj Cię kocham, bo...</div>
       <div className='heart-icon'><img src={logo}  /></div>
       <div className='reason'>{reason}</div>
     </div>
