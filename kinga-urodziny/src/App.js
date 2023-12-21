@@ -36,18 +36,21 @@ const App = () => {
     setTodaysDate(todayDate); // state
     const goodReason = getTodaysReason(todayDate); // getting reason for today's date
     setReason(goodReason);
-    
-    
   }, [])
-  const handleRotate = () => setRotateChevron(!rotateChevron);
-  const rotate = rotateChevron ? "rotate(360deg)" : "rotate(0)"
+
+  const clickHeart = () =>{
+    window.alert("NO I PO CO KLIKASZ?!🥰😂");
+  }
+
   return <>
     <div className='container'>
       <div className='date'>{todaysDate}</div>
-      <div className='psst'>Pssssstt... Kiki</div>
+      <div className='psst'>Pssssstt... Kiki🥰</div>
       <div className='today'>Dzisiaj Cię kocham, bo...</div>
-      <div className='heart-icon rotating'><img src={logo}  /></div>
+      <div onClick={clickHeart} className='heart-icon rotating'><img src={logo}  /></div>
       <div className='reason'>{reason}</div>
+      <div>~MP</div>
+      <div className='ps'>PS. Kliknij w serduszko</div>
     </div>
   </>
 }

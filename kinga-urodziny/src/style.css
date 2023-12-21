@@ -1,8 +1,13 @@
+body{
+    background: rgb(100, 210, 230);
+}
+
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid black; */
 }
 
 .date{
@@ -19,7 +24,7 @@
     margin-top: 1%;
     margin-bottom: 4%;
     color: red;
-    font-size: 3em;
+    font-size: 4em;
 
 }
 
@@ -30,6 +35,8 @@
     /* transition: all 3s linear; */
     /* transform: rotate(160deg); */
     /* transition: rotate 4s; */
+    /* box-shadow: 10px 10px 10px 10px black; */
+    /* border: 1px solid black; */
 }
 
 .heart-icon:hover{
@@ -47,8 +54,15 @@
 .reason{
     font-size: 2em;
     /* margin-top: 4%; */
-}
+    margin-left: 10%;
+    margin-right: 10%;
+    /* border: 1px solid black; */
 
+}
+.ps{
+    margin-top: 10%;
+    font-size: 0.7em;
+}
 
 @keyframes rotating {
     from {
@@ -67,9 +81,12 @@
     .date{
         margin-top: 10%;
     }
-    .today, .psst, .reason {
-        font-size: 1em;
+    .today, .psst {
+        font-size: 2em;
         /* margin-bottom: 10%; */
+  }
+  .reason{
+    font-size: 1.7em;
   }
   .heart-icon{
     margin-top: 10%;
@@ -77,3 +94,4 @@
 
   }
 }
+
